@@ -1,38 +1,521 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: #1e90ff;
+  --white: #f5f5f5;
+  --font-color:#171212;
+  --light-orange:#e0b0ae;
+  --dark-orange:#e04d4d;
+  --dark-color:#000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+  background: var(--white) no-repeat;
+  color:var(--font-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifs
+}
+button{
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* header css starts here  */
+.header-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 20px;
+}
+.header-container .header-logo{
+  padding: 0 5px;
+ 
+
+}
+.header-container .header-logo h1 a{
+  color:var(--font-color) !important;
+}
+.header-container .header-navbar ul{
+  display: flex;
+  justify-content: space-around;
+}
+.header-container .header-navbar ul li a{
+  color:var(--font-color) !important;
+  font-size: 22px;
+  padding: 10px 10px;
+  
+}
+.header-container .header-sidebar{
+  display: flex; 
+  justify-content: space-between;
+
+}
+.header-container .header-sidebar .search-icon{
+  margin: 0 15px;
+  font-size: 1.5rem; 
+
+}
+.header-container .header-sidebar .search-icon i{
+ padding: 3px;
+}
+.header-container .header-sidebar .header-profile{
+  padding: 0 12px;
+  margin: 0 15px;
+  align-items: center;
+  font-size: 1.4rem; 
+}
+.header-container .header-sidebar .header-shop{
+  padding: 7px 10px;
+  margin: 0 15px;
+  background: var(--light-orange);
+  border-radius: 50%;
+  font-size: 1.4rem; 
+}
+/* header css ends here */
+
+/* home css starts here */
+.home{
+  padding: 30px 100px;
+}
+.home .container{
+  
+  background: var(--light-orange);
+  position: relative;
+}
+
+.home-content{
+ display: flex;
+ flex-direction: column;
+align-items: center;
+}
+.home-content .home-title{
+  font-size: 4rem;
+  font-weight: lighter;
+  padding: 5px 10px;
+  position: relative;
+  width: 500px;
+}
+.home-content .home-title::after{
+  content: '';
+  background: var(--font-color);
+  height: 2px;
+  width: 15%;
+  position: absolute;
+  bottom: -8%;
+  left: 5%;
+}
+
+
+.home-content .home-body{
+  width: 500px;
+  padding: 20px 20px;
+}
+
+.home-content .home-discover h6{
+float: left;
+  
+}
+.home-button{
+  margin-top: 20px;
+  padding: 10px;
+}
+.home-button .btn{
+  padding: 10px 20px;
+}
+.btn1{
+  background: var(--dark-orange);
+  color:var(--white);
+  margin: 5px;
+  border: 1px solid var(--dark-orange);
+}
+.btn2{
+  background-color: var(--white);
+  color:var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+  font-weight: bolder;
+}
+.arrow{
+position: absolute;
+right: 0;
+bottom: -5%;
+}
+
+.arrow .arrow-left{
+  padding: 5px 5px;
+  color: var(--dark-orange);
+  background: var(--white);
+  border: 1px solid var(--dark-orange);
+  margin: 2px 5px;
+  font-size: 30px;
+}
+.arrow .arrow-right{
+  padding: 5px 5px;
+  color: var(--white);
+  background: var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+  margin: 2px 5px;
+  font-size: 30px;
+}
+
+/* home css ends here */
+
+/* banner csss starts here */
+.banner{
+  padding: 30px 100px;
+}
+.banner .container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.banner-glass,
+.banner-watch{
+  padding: 10px 30px;
+  position: relative;
+  background: #fcfcfc;
+  margin-bottom: 100px;
+}
+
+.banner-title{
+  margin-top: 10px;
+  padding: 5px;
+  color: var(--font-color);
+  font-weight: lighter;
+  
+}
+.banner-title span{
+  color: var(--dark-color);
+  font-weight: bold;
+}
+.banner-text{
+  margin-top: 10px;
+  padding: 5px 5px;
+}
+.banner-link{
+  margin-top: 10px;
+  padding: 5px 5px;
+  color: var(--dark-color) !important;
+  font-weight: bold;
+  position: relative;
+}
+.banner-link::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 90%;
+  position: absolute;
+  bottom: -8%;
+  left: 5%;
+}
+
+
+ .banner .container img{
+  height: 100px;
+  width: 100px;
+  right: 0;
+  top:80%;
+  position: absolute;
+
+
+}
+
+/* banner css ends here */
+
+/* card css  */
+.card-deal{
+  padding: 10px 10px;
+  background-color: #fcfcfc;
+}
+.card-offer{
+  padding: 0 5px;
+  background: #fcfcfc;
+}
+.card-offer img{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+.card-body .card-title{
+  font-size: 20px;
+  margin-top: 15px;
+  color: var(--dark-color);
+  font-weight: bold;
+}
+.card-text p{
+ font-size: 16px;
+  color:var(--font-color);
+  margin-top: 15px;
+
+}
+.card-text del{
+  margin-top: 15px;
+  font-size: 16px;
+
+}
+.card-text h2{
+margin-top: 10px;
+font-size: 18px;
+}
+.card-deal form{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.card-deal form i{
+  padding: 2px;
+  margin: 2px;
+  background-color: var(--white);
+  color: var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+}
+
+.card-deal form button{
+  padding: 5px 15px;
+  width: 100x;
+  background: var(--dark-orange);
+  color: var(--white);
+  border: 1px solid var(--dark-orange);
+}
+
+/* card css ends here */
+
+/* monthly deals css starts here */
+.monthly-deals .container{
+  padding: 30px 100px;
+  display: flex;
+}
+.card-all{
+  margin-top: 50px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-all card1{
+  margin: 5px 2px;
+}
+.monthly-deals .container.monthly-title{
+  font-size: 30px;
+  font-weight: lighter;
+  color: var(--dark-color);
+  position: relative;
+}
+.monthly-deals .container.monthly-title::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 60%;
+  position: absolute;
+  bottom: -8%;
+  left: 5%;
+ }
+ 
+/*monthly deals css end here */
+
+/* recent news css starts here */
+.recent-news .container{
+  padding: 30px 100px;
+}
+.recent-news .container .recent-title{
+  font-size: 40px;
+  font-weight: lighter;
+  color: var(--font-color);
+  position: relative;
+  
+}
+
+.recent-news .container .recent-title::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 15%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+
+.recent-container{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.recent-container1{
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  
+}
+.recent-container1 h6{
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 30px;
+  color: var(--font-color);
+}
+.recent-container1 h4{
+  font-size: 30px;
+  color: var(--dark-color);
+  margin-top: 30px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.recent-container1 button{
+  padding: 10px 20px;
+  width: 150px;
+
+  background: var(--white);
+  border: 2px solid var(--dark-orange);
+  color: var(--dark-orange);
+  margin-top: 30px;
+
+}
+.recent-container2{
+  padding: 10px 20px;
+  position: relative;
+
+}
+.recent-container2 img{
+  height: 400px;
+  width: 500px;
+}
+.recent-back{
+  background: var(--light-orange);
+  z-index: -1;
+  position: absolute;
+  right:-30%;
+  top:-15%;
+  height:400px ;
+  width: 500px;
+}
+/* recent-news css ends here */
+
+/* series css starts here */
+.series .container{
+  padding: 30px 100px;
+}
+.series-container{
+  display: flex;
+  padding: 10px 10px;
+}
+.series-title{
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dark-color);
+  position: relative;
+}
+.series-title::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 20%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+.series-card{
+  margin-top: 20px;
+  padding: 5px 5px ;
+  display: flex;
+}
+.series-card img{
+  width: 100px;
+  height: 100px
+}
+.series-card-text{
+padding: 5px 5px;
+margin-right: 3px;
+}
+.series-card-text h2{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+.series-card-text h4{
+ 
+  font-size: 20px;
+  color: var(--dark-color);
+  
+}
+.series-container1,
+.series-container2,
+.series-container3{
+  margin: 10px 10px;
+  padding: 5px 5px;
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* series csss ends here */
+
+/* testimonials css starts here */
+.testimonials .container{
+  padding: 30px 100px;
+  margin-top: 20px;
+}
+.testimonial-container{
+  display: flex;
+}
+.testimonial-container1,
+.testimonial-container2{
+  padding: 10px 10px;
+  margin: 5px 10px;
+
+}
+.testimonial-container1 img{
+width: 400px;
+height: 400px;
+
+}
+.testimonial-container1{
+  position: relative;
+}
+.testimo-back{
+  background: var(--light-orange);
+  z-index: -1;
+  position: absolute;
+  left:-30%;
+  top:-10%;
+  height:400px ;
+  width: 500px;
+}
+.testimonial-container2 h1{
+  font-size: 25px;
+  font-weight: 500px;
+  color: var(--dark-color);
+  position: relative;
+  
+}
+.testimonial-container2 h1::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 20%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+
+.testimonial-container2 p{
+  margin-top: 30px;
+  color: var(--dark-color);
+}
+.testimonial-container2 h3{
+  margin-top: 40px;
+  font-size: 20px;
+  color: var(--dark-color);
+}
+.testimonial-container2 h5{
+
+  font-size: 20px;
+  color: var(--dark-color);
+  font-weight: 400;
 }
