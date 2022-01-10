@@ -87,6 +87,10 @@ const Series = () => {
                     </div>
                 </div>
 
+                <div className='series-seemore'>
+                    <button className='see-more-button'> See More </button>
+                </div>
+
             </Container>
         </div>
     )

@@ -1,6 +1,7 @@
 import React from 'react';
 import person2 from '../assets/images/person2.jpg';
 import { Container } from 'react-bootstrap';
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 
 const Testimonials = () => {
     return (
@@ -30,6 +31,15 @@ const Testimonials = () => {
                             Content Creator/Influencer
                         </h5>
                      </div>
+                </div>
+
+                <div className='testimonials-arrow'>
+                        <i className='arrow-left'>
+                            <AiOutlineArrowLeft/>
+                        </i>
+                        <i className='arrow-right'>
+                            <AiOutlineArrowRight/>
+                        </i>
                 </div>
 
             </Container>

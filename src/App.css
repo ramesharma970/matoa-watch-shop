@@ -222,8 +222,8 @@ bottom: -5%;
   height: 100px;
   width: 100px;
   right: 0;
-  top:80%;
-  position: absolute;
+  bottom: 0;
+  float: right;
 
 
 }
@@ -243,6 +243,10 @@ bottom: -5%;
   width: 150px;
   height: 150px;
   margin-bottom: 5px;
+  transition: transform 1s;
+}
+.card-offer img:hover{
+  transform: scale(0.5);
 }
 .card-body .card-title{
   font-size: 20px;
@@ -296,26 +300,26 @@ font-size: 18px;
 .card-all{
   margin-top: 50px;
   display:flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  
 }
 .card-all card1{
-  margin: 5px 2px;
+  margin: 5px 5px;
 }
-.monthly-deals .container.monthly-title{
-  font-size: 30px;
+.monthly-deals .container h1{
+  font-size: 40px;
   font-weight: lighter;
   color: var(--dark-color);
   position: relative;
 }
-.monthly-deals .container.monthly-title::after{
+.monthly-deals .container h1::after{
   content: '';
   background: var(--dark-color);
   height: 1px;
   width: 60%;
   position: absolute;
-  bottom: -8%;
-  left: 5%;
+  top:12%;
+  left: 2%;
  }
  
 /*monthly deals css end here */
@@ -387,6 +391,10 @@ font-size: 18px;
 .recent-container2 img{
   height: 400px;
   width: 500px;
+  transition: transform .9s;
+}
+.recent-container2 img:hover{
+  transform: scale(1.1);
 }
 .recent-back{
   background: var(--light-orange);
@@ -429,7 +437,11 @@ font-size: 18px;
 }
 .series-card img{
   width: 100px;
-  height: 100px
+  height: 100px;
+  transition: transform 1s;
+}
+.series-card img:hover{
+  transform: scale(0.8);
 }
 .series-card-text{
 padding: 5px 5px;
@@ -454,6 +466,25 @@ margin-right: 3px;
   width: 30%;
 }
 
+.series-seemore{
+  padding: 30px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.see-more-button{
+  background: var(--white);
+  color: var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+  padding: 20px 30px;
+  width: 300px;
+  font-size: 25px;
+}
+
+
+
 /* series csss ends here */
 
 /* testimonials css starts here */
@@ -473,7 +504,11 @@ margin-right: 3px;
 .testimonial-container1 img{
 width: 400px;
 height: 400px;
+transition: transform 1s;
 
+}
+.testimonial-container1 img:hover{
+  transform: scale(1.1);
 }
 .testimonial-container1{
   position: relative;
@@ -518,4 +553,133 @@ height: 400px;
   font-size: 20px;
   color: var(--dark-color);
   font-weight: 400;
+}
+
+.testimonials-arrow{
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+}
+.testimonials-arrow .arrow-left{
+  font-weight: lighter;
+}
+.arrow-left{
+  font-size: 40px;
+  width: 50px;
+  font-weight: lighter;
+}
+
+.arrow-right{
+  font-size: 80px;
+}
+
+/* testimonials css ends here */
+
+/* gallery css starts here */
+.gallery .container{
+  padding: 30px 100px;
+}
+.gallery-title{
+  padding: 5px 10px;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--dark-color);
+  position:relative;
+}
+.gallery-title::after{
+content: '';
+background: var(--dark-color);
+height: 1px;
+width: 10%;
+position: absolute;
+bottom: 5%;
+left: 1%;
+}
+.gallery-container{
+  margin-top: 20px;
+  padding: 10px 0;
+  /* float: right; - learn and try on another porject-overlapping problem */
+}
+.gallery-container img{
+  padding:5px 5px;
+  height: 200px;
+  width: 200px;
+  transition:transform 1s;
+  overflow: none;
+}
+.gallery-container img:hover{
+  transform: scale(0.5);
+}
+
+/* gallery css ends here */
+
+/* footer css starts here */
+.footer{
+  margin-top: 20px ;
+
+}
+
+
+.footer .container{
+  
+  padding: 30px 100px;
+  background: var(--light-orange);
+  height: 50vh;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 5px;
+}
+.footer-container h2{
+  font-size: 25px;
+  color: var(--dark-color);
+  font-weight: 600;
+  position: relative;
+}
+.footer-container h2::after{
+  content: '';
+  background: var(--dark-color);
+  height: 1px;
+  width: 60%;
+  position: absolute;
+ bottom: 5%;
+  left: 2%;
+}
+.about-container{
+  margin-top: 10px;
+  padding: 10px 10px;
+  
+}
+.about-container p{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--font-color);
+  margin-top: 10px;
+}
+.about-container p i{
+  padding: 1px 3px;
+  margin-right: 3px;
+}
+.footer-container3,
+.footer-container2,
+.footer-container1
+.about-container p{
+  cursor: pointer;
+}
+
+/* footer css ends here */
+.copyright .container{
+  padding: 30px 100px;
+  background: var(--dark-orange);
+}
+.copyright-container{
+  padding: 5px 5px;
+}
+.copyright-container h2{
+  text-align: center;
+  font-size: 25px;
+  color: var(--dark-color);
+  font-weight: 500;
 }
